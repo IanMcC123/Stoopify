@@ -3,4 +3,4 @@
 Main repository for Stoopify platform
 
 Team Members:
-Safin Shihab
+Safin Shihab, Amine Slaoui
