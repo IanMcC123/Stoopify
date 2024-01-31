@@ -6,12 +6,6 @@ This is a screen capture of our work from the first front end brainstorming sess
 
 We added a header, footer and a hero section.
 
-For header these are the features that were created:
+Today, these are the features that were created: Stoopify Title, Search Bar, Login Button, and Cart Button.
 
-Markup : _ Stoopify Title
-_ Search Bar
-_ Login Button
-_ Cart Button
-
-In Figma, everything was grouoped for accessiblity. Moving forward, we will be following this format when creating other pages.
-![img](./captures/Figma_Layout.png)
+In Figma, every object was grouped for accessiblity. For example, header, footer and etc.. Moving forward, we will be following the same format when creating other pages.
