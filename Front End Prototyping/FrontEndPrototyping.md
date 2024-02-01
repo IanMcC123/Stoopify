@@ -21,3 +21,7 @@ Below is how the footer section of Stoopify would look:
 Added Hero Section:
 
 ![img](./captures/hero.png)
+
+Today, I added a profile section for the user. The user has access to their personal information such as (phone number, email, location)
+
+![img](./captures/02-01-1.png)
