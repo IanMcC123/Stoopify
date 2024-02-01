@@ -22,6 +22,12 @@ Added Hero Section:
 
 ![img](./captures/hero.png)
 
-Today, I added a profile section for the user. The user has access to their personal information such as (phone number, email, location)
+Today, we added a profile section for the user. The user has access to their personal information such as (phone number, email, location)
 
 ![img](./captures/02-01-1.png)
+
+
+This is what the header looks like when the user is logged in. He has access to his messages and the furniture he has posted.
+We also added tabs that help the user navigate through the website.
+ 
+![img](./captures/02-01-2.png)
