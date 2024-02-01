@@ -18,9 +18,9 @@ Below is how the footer section of Stoopify would look:
 
 ![img](./captures/Footer.png)
 
-Added Hero Section:
+Added Hero Section and updated the header. This is what the homepage would look like for a visitor.
 
-![img](./captures/hero.png)
+![img](./captures/hero_02-01.png)
 
 Today, I added a profile section for the user. The user has access to their personal information such as (phone number, email, location)
 
