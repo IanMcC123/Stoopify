@@ -17,3 +17,7 @@ In Figma, every object was grouped for accessiblity. For example, header, footer
 Below is how the footer section of Stoopify would look:
 
 ![img](./captures/Footer.png)
+
+Added Hero Section:
+
+![img](./captures/hero.png)
