@@ -1,5 +1,22 @@
 import mongoose from 'mongoose';
 
+const likeSchema = new mongoose.Schema({
+  user: { // references the user who likes the post
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
+  likePost: { // references the post liked
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Post',
+    required: true,
+  },
+  timestamp: { // tracks the time the post was liked by the user
+    type: Date,
+    default: Date.now,
+  },
+});
+
 const commentSchema = new mongoose.Schema(
   {
     user: { // references the user who comments
@@ -12,7 +29,12 @@ const commentSchema = new mongoose.Schema(
       max: 50, 
       required: true,
     },
-    timestamp: {// Date of comment
+    commentPost: { //References the post
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Post',
+      required: true,
+    },
+    timestamp: {// Time of comment by the user
       type: Date,
       default: Date.now,
     },
@@ -27,15 +49,9 @@ const postItem = new mongoose.Schema(
     },
     description: { // description of image
       type: String,
-      max: 50,
+      max: 200,
       required: true,
     },
-    likes: [ // an array that tracks likes with reference to each user who liked the post
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-      },
-    ],
     available: { // availibilty status
       type: Boolean,
       default: true,
@@ -58,5 +74,8 @@ const postItem = new mongoose.Schema(
 );
 
 const Post = mongoose.model('Post', postItem);
+const Comment = mongoose.model('Comment', commentSchema);
+const Like = mongoose.model('Like', likeSchema);
 
-export default Post;
+export { Post, Comment, Like };
+
