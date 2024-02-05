@@ -69,7 +69,6 @@ const postItem = new mongoose.Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
       },
-    comments: [commentSchema], // an array of comments
   }
 );
 
