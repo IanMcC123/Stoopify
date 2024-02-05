@@ -47,6 +47,9 @@ const userSchema = new mongoose.Schema(
         type: String,
         required: true,
       },
+      proilePicture: {
+        type: String,
+      }
 
     },
     {timestamps: true} // time the profile was created
