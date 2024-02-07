@@ -1,0 +1,10 @@
+/* home page styling */
+
+.Home {
+  text-align: center;
+  border: 5px;
+}
+
+.Home-link {
+  color: #4cadc8;
+}
