@@ -1,22 +1,20 @@
-<<<<<<< HEAD
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from "./pages/home/home";
+import Profile from "./pages/profile/profile";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route 
-          path="/"
+          path="/home"
           element={<Home />}
+        />
+        <Route 
+          path="/profile"
+          element={<Profile />}
         />
       </Routes>
     </BrowserRouter>
   );
-=======
-import "./App.css";
-
-function App() {
-  return <div className="App"></div>;
->>>>>>> 980f6fc5d4204519b85982bb71db15a92115e45b
 }

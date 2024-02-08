@@ -1,19 +1,21 @@
 import './home.css';
+import Footer from '../../components/footer/footer'
+import Header from '../../components/header/header'
 
 export default function Home() {
     return (
-        <div className="Home">
+      <>
+        <Header />
+        <div class="home-content-wrapper">
           <p>
-            Home
+            This is The Home Page
           </p>
-          <a
-            className="Home-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p>
+            Home Page Content
+          </p>
+          <a href="/profile">Profile Page</a>
         </div>
+        <Footer />
+      </>
     )
 }

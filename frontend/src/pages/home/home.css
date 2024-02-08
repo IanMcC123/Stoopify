@@ -1,10 +1,7 @@
 /* home page styling */
 
-.Home {
+.home-content-wrapper {
   text-align: center;
-  border: 5px;
-}
-
-.Home-link {
-  color: #4cadc8;
+  border: 5px rgb(17, 255, 0);
+  background-color: rgb(255, 255, 175);
 }
