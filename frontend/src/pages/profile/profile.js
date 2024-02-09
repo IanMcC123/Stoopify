@@ -13,7 +13,7 @@ export default function Profile() {
             <p>
                 Profile Content
             </p>
-            <a href="/home">Return to Home</a>
+            <a href="/">Return to Home</a>
             </div>
             <Footer />
         </>
