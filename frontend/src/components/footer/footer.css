@@ -1,0 +1,12 @@
+/* footer styling */
+
+/* Utilize flex boxes for structuring content in grid or list formats */
+
+footer {
+    position: relative;
+    text-align: center;
+    border: 5px solid rgb(223, 8, 169);
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(228, 228, 228);
+}
