@@ -1,15 +1,53 @@
 /* Header Styling */
 
 /* Utilize flex boxes for structuring content in grid or list formats */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
+body {
+  margin: 0px;
+}
 header {
-    text-align: center;
-    border: 5px solid rgb(223, 8, 169);
-    padding: 20px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(228, 228, 228);
-    /* margin: 0; */
-    /* box-sizing: border-box; */
-    /* width: 100%; */
-    /* margin-bottom: 2em; */
+  font-size: 400%;
+  font-weight: 600; /* Semibold */
+  margin-left: -13%;
+  margin-top: 0.05%;
+  color: rgba(76, 50, 33, 1);
+}
+#login,
+#menu-items {
+  color: rgba(76, 50, 33, 1);
+}
+#navBar,
+#search-bar {
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  font-size: 310%;
+  font-weight: 600;
+}
+#navBar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(226, 205, 188, 1);
+}
+#search-bar {
+  width: 500px;
+}
+#search-container {
+  margin-top: 1.5%;
+  margin-bottom: 0.5%;
+}
+#search-bar {
+  height: 80%;
+  border-radius: 20px;
+  border-color: rgba(226, 205, 188, 0);
+}
+
+#login {
+  display: flex;
+}
+#menu-items {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(226, 205, 188, 1);
 }
