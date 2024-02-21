@@ -31,3 +31,8 @@ This is what the header looks like when the user is logged in. He has access to 
 We also added tabs that help the user navigate through the website.
  
 ![img](./captures/02-01-2.png)
+
+
+As of 02-21 this is the current state of the footer of the website inspired by the Figma implementation. 
+
+![img](./captures/02-21-1.png)
