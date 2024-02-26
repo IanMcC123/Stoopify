@@ -1,5 +1,4 @@
 /* Header Styling */
-
 /* Utilize flex boxes for structuring content in grid or list formats */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
@@ -7,45 +6,67 @@ body {
   margin: 0px;
 }
 header {
-  font-size: 400%;
-  font-weight: 600; /* Semibold */
-  margin-left: -13%;
-  margin-top: 0.05%;
+  font-size: 50pt;
+  font-weight: 600;
+  margin-left: -4%;
+  margin-top: 2.07%;
   color: rgba(76, 50, 33, 1);
 }
+
+#login {
+  /* margin-top: 1.07%; */
+  margin-top: 2.07%;
+}
+
 #login,
 #menu-items {
   color: rgba(76, 50, 33, 1);
 }
+
 #navBar,
 #search-bar {
   font-family: "Montserrat", sans-serif;
 }
+
 h1 {
   font-size: 310%;
   font-weight: 600;
 }
+
 #navBar {
   display: flex;
   justify-content: space-evenly;
   background-color: rgba(226, 205, 188, 1);
 }
-#search-bar {
-  width: 500px;
-}
+
 #search-container {
   margin-top: 1.5%;
   margin-bottom: 0.5%;
+  position: relative; /* Make the container relative */
 }
+
 #search-bar {
-  height: 80%;
+  width: 600px;
+  height: 45%;
   border-radius: 20px;
   border-color: rgba(226, 205, 188, 0);
+  margin-top: 4.5%;
+  margin-right: 10%;
+  padding-left: 30px; /* Add left padding to accommodate the icon */
+  padding-left: 30px;
+}
+
+#search-icon-container {
+  position: absolute; /* Position the icon absolutely */
+  left: 92%; /* Adjust as needed */
+  top: 58%; /* Align vertically */
+  transform: translateY(-50%);
 }
 
 #login {
   display: flex;
 }
+
 #menu-items {
   display: flex;
   justify-content: center;

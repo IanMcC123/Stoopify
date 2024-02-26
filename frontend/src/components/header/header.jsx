@@ -1,18 +1,24 @@
 // Header Render
 import "./header.css";
-
 import login from "../assets/header/Login.png";
 import DownArrow from "../assets/header/Down_Arrow.png";
+import searchIcon from "../assets/header/Search_Icon.png";
 
 export default function Header() {
   return (
-    // NavBar
     <div>
       <section id="navBar">
         <header>Stoopify</header>
         <div id="search-container">
-          <input id="search-bar" type="text" placeholder="Search Furniture" />
           {/* Add search Icon here */}
+          <input
+            id="search-bar"
+            type="text"
+            placeholder="Search Furniture..."
+          />
+          <div id="search-icon-container">
+            <img src={searchIcon} alt="Search" width="20" height="20" />
+          </div>
         </div>
         <div id="login">
           <h3 style={{ fontWeight: 600, fontSize: 30 }}>
