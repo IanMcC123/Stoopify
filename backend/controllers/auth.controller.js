@@ -4,6 +4,7 @@ import bcrypt from 'bcrypt';
 
 export const signup = async (req, res) => {
     const {username, password, email, address, phoneNumber} = req.body;
+    const { street, city, state, zipCode, country } = address;
 
     const validUser = await User.findOne({username})
     if (validUser){
@@ -16,7 +17,13 @@ export const signup = async (req, res) => {
         username, 
         password: hashedPassword,
         email,
-        address,
+        address: {
+            street,
+            city,
+            state,
+            zipCode,
+            country,
+        },
         phoneNumber,
     });
 

@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
-import {useNavigate} from 'react-router-dom'
-import '../styles/SignInStyle.css';
+//import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
 
 export default function SignUp() {
-  const history = useNavigate();
+  // const history = useNavigate();
   const [state, setState] = useState({
     username: "",
     password: "",
@@ -19,12 +18,25 @@ export default function SignUp() {
     phoneNumber: "",
   });
 
-  const handleChange = (fieldName) => (e) => {
+  const handleChange = (fieldName, nestedFieldName) => (e) => {
     const value = e.target.value;
-    setState({
-      ...state,
-      [fieldName]: value
-    });
+  
+    // If nestedFieldName is provided, update the nested object
+    if (nestedFieldName) {
+      setState((prevState) => ({
+        ...prevState,
+        [fieldName]: {
+          ...prevState[fieldName],
+          [nestedFieldName]: value,
+        },
+      }));
+    } else {
+      // If no nestedFieldName, update the attribute directly
+      setState((prevState) => ({
+        ...prevState,
+        [fieldName]: value,
+      }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -41,11 +53,10 @@ export default function SignUp() {
             country: state.address.country,
         },
         phoneNumber: state.phoneNumber,
-        profilePicture: state.profilePicture,
     };
     axios.post("http://localhost:4000/api/auth/signup", userData).then((response) => {
       console.log(response);
-      history('/sign-in');
+      //history('/sign-in');
     })
     .catch((error) => {
       if (error.response) {
