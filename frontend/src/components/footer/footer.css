@@ -1,12 +1,9 @@
-/* footer styling */
-
-/* Utilize flexboxes for structuring content in grid or list formats */
+/* Footer styling */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 footer {
     position: relative;
     text-align: center;
-    /* border: 5px solid rgb(223, 8, 169); */
     padding: 10px;
     color: rgb(0, 0, 0);
     background-color: rgb(76, 50, 33);
@@ -50,6 +47,7 @@ footer {
 #join_bar{
     border-radius: 8vh;
     color: rgb(217, 217, 217);
+    margin-right: 10px;
 }
 
 #Contact{
@@ -59,7 +57,11 @@ footer {
 }
 
 #Newsletter{
-    margin-top: 40%;
+    margin-top: 60%;
+}
+
+#Join{
+    margin-top: -2%;
 }
 
 
