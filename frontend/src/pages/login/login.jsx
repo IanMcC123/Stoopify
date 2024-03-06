@@ -23,9 +23,9 @@ export default function Login() {
           username: state.username,
           password: state.password
         };
-        axios.post("/api/auth/signin", userData).then((response) => {
+        axios.post("http://localhost:4000/api/auth/login", userData).then((response) => {
           console.log(response);
-          history('/feed');
+          history('/');
         })
         .catch((error) => {
           if (error.response) {
