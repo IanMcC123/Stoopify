@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-//import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
 
 export default function SignUp() {
-  // const history = useNavigate();
+  const history = useNavigate();
   const [state, setState] = useState({
     username: "",
     password: "",
@@ -56,7 +56,7 @@ export default function SignUp() {
     };
     axios.post("http://localhost:4000/api/auth/signup", userData).then((response) => {
       console.log(response);
-      //history('/sign-in');
+      history('/login');
     })
     .catch((error) => {
       if (error.response) {
@@ -75,7 +75,7 @@ export default function SignUp() {
       <div className="container">
         <div className="box">
           <div className="signTitle">
-            <h2>Sign Up</h2><br />
+            <h2>Sign Up</h2>
           </div>
             <div className="username">
                 <input 

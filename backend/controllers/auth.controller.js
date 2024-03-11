@@ -41,3 +41,34 @@ export const signup = async (req, res) => {
     }
 
 };
+
+export const login = async (req, res) => {
+    const {username, password} = req.body;
+    try {
+        const user = await User.findOne({ username });
+
+        if (!user) {
+            return res.status(401).json({ error: 'Invalid username or password' });
+        }
+
+        // Compare the entered password with the stored hash
+        const passwordMatch = await bcrypt.compare(password, user.password);
+
+        if (passwordMatch) {
+            // Passwords match, so you can consider the user logged in
+            const token = jwt.sign({
+                username: user.username,
+                id: user._id,
+            }, process.env.JWT_SECRET)
+              
+            res.cookie('session_token', token);
+            res.status(200).json({ success: true, message: 'Login successful!' });
+        } else {
+            // Passwords don't match
+            res.status(401).json({ error: 'Invalid username or password' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};

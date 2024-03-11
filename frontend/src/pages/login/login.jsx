@@ -44,7 +44,7 @@ export default function Login() {
         <div className="container">
         <div className="box">
             <div className="signTitle">
-            <h2>Sign In</h2><br />
+            <h2>Sign In</h2>
             </div>
             
             <div className="email">
