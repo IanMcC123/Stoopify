@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 //import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
+import './signup.css';
 
 export default function SignUp() {
   // const history = useNavigate();
@@ -71,23 +72,23 @@ export default function SignUp() {
   };
 
   return (
+    <div className="signup-page">
     <form onSubmit={handleSubmit}>
-      <div className="container">
-        <div className="box">
+      <div className="signup_container">
           <div className="signTitle">
-            <h2>Sign Up</h2><br />
+            <h2>Sign Up</h2>
           </div>
-            <div className="username">
+            <div className="wrapper">
                 <input 
                 className = "textSign" 
                 type="text" 
-                name = "username"
+                name = "Username"
                 value = {state.username}
                 onChange = {handleChange('username')}
-                placeholder="username"
+                placeholder="Username"
                 required/> 
             </div>
-            <div className="password">
+            <div className="wrapper">
                 <input 
                 className = "textSign" 
                 type="text" 
@@ -97,7 +98,7 @@ export default function SignUp() {
                 placeholder="Password" 
                 required/>
             </div>
-            <div className="email">
+            <div className="wrapper">
                 <input 
                 className="textSign" 
                 type="email" 
@@ -108,7 +109,7 @@ export default function SignUp() {
                 required
                 />
             </div>
-            <div className="address">
+            <div className="wrapper">
                 <input 
                 className="textSign" 
                 type="text" 
@@ -155,7 +156,7 @@ export default function SignUp() {
                 required
                 />
             </div>
-            <div className="phoneNumber">
+            <div className="wrapper">
                 <input 
                 className="textSign" 
                 type="tel" 
@@ -169,8 +170,11 @@ export default function SignUp() {
             <div className="submitButton">
               <button id='signUpB' type = "submit">Sign up</button>
             </div>
+            <h4>
+              Already have an account ? <a href='/login'>Login Now</a>
+            </h4>
         </div>   
-      </div>
     </form>
+    </div>
   )
 }

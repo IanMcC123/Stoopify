@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
+import "./login.css";
 
 export default function Login() {
     const history = useNavigate();
@@ -41,23 +42,23 @@ export default function Login() {
     
     return (
     <form onSubmit={handleSubmit}>
-        <div className="container">
-        <div className="box">
+        <div className="login_page">
+          <div className="login_container">
             <div className="signTitle">
-            <h2>Sign In</h2><br />
+              <h2>Sign In</h2>
             </div>
             
-            <div className="email">
+            <div className="wrapper">
                 <input 
                 className = "textSign" 
                 type="text" 
                 name = "username"
                 value = {state.username}
                 onChange = {handleChange('username')}
-                placeholder="username"
+                placeholder="Username"
                 required/> 
             </div>
-            <div className="password">
+            <div className="wrapper">
                 <input 
                 className = "textSign" 
                 type="text" 
@@ -71,7 +72,7 @@ export default function Login() {
                 {/* <input type="submit" value = "Login" /> */}
                 <button id='signUpB' type = "submit">Sign in</button>
             </div>
-        </div>     
+          </div>     
         </div>
     </form>
         
