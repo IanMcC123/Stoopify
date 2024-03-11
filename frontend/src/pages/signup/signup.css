@@ -1,5 +1,5 @@
 
-
+/* Styling for the signup background */
 .signup-page{
     display: flex;
     min-height: 120vh;
@@ -8,19 +8,18 @@
     background: #4070f4;
 } 
 
-/* TODO
-- Add background for container
-- Make buttons bigger
- */
-
-
-.address{
+/* Styling for signup container which contains the input field, signup button, sign up text */
+.signup_container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-right: 160px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
+/* Styling for the Sign Up button */
 form .submitButton button{
     height: 50%;
     width: 50%;
@@ -37,7 +36,7 @@ form .submitButton button{
   }
 
 
-.submitButton button:focus,
+.submitButton button:focus,   
 .submitButton button:valid{
     border-color: #6a625c;
   }
@@ -50,6 +49,7 @@ form .submitButton button{
     cursor: pointer;
 }
 
+/* Styling for the input field (Username, Password, Email, Phone Number) */
 .wrapper input{
     width: 95%;
     border: none;
@@ -66,17 +66,17 @@ form .submitButton button{
     font-size: 20px;
 }
 
+/* Styling for the Address field */
+.address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 160px;
+}
+
+/* Styling for the Sign Up text */
 .signTitle{
     align-items: center;
     border-bottom: 2px solid #4070f4
 }
 
-.signup_container{
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    padding: 40px;
-    border-radius: 5px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
