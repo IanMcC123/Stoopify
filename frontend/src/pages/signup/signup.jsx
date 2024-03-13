@@ -1,93 +1,104 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
+import './signup.css';
 
 export default function SignUp() {
+  // Initialize navigate hook for navigation
   const history = useNavigate();
+
+  // Define state for user information inputs using useState hook
   const [state, setState] = useState({
-    username: "",
-    password: "",
-    email: "",
-    address: {
-        street: "",
-        city: "",
-        state: "",
-        zipCode: "",
-        country: "",
+      username: "",
+      password: "",
+      email: "",
+      address: {
+          street: "",
+          city: "",
+          state: "",
+          zipCode: "",
+          country: "",
       },
-    phoneNumber: "",
+      phoneNumber: "",
   });
 
+  // Define a function to handle changes in form inputs
   const handleChange = (fieldName, nestedFieldName) => (e) => {
-    const value = e.target.value;
-  
-    // If nestedFieldName is provided, update the nested object
-    if (nestedFieldName) {
-      setState((prevState) => ({
-        ...prevState,
-        [fieldName]: {
-          ...prevState[fieldName],
-          [nestedFieldName]: value,
-        },
-      }));
-    } else {
-      // If no nestedFieldName, update the attribute directly
-      setState((prevState) => ({
-        ...prevState,
-        [fieldName]: value,
-      }));
-    }
+      const value = e.target.value;
+
+      // If nestedFieldName is provided, update the nested object
+      if (nestedFieldName) {
+          setState((prevState) => ({
+              ...prevState,
+              [fieldName]: {
+                  ...prevState[fieldName],
+                  [nestedFieldName]: value,
+              },
+          }));
+      } else {
+          // If no nestedFieldName, update the attribute directly
+          setState((prevState) => ({
+              ...prevState,
+              [fieldName]: value,
+          }));
+      }
   };
 
+  // Define a function to handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const userData = {
-        username: state.username,
-        password: state.password,
-        email: state.email,
-        address: {
-            street: state.address.street,
-            city: state.address.city,
-            state: state.address.state,
-            zipCode: state.address.zipCode,
-            country: state.address.country,
-        },
-        phoneNumber: state.phoneNumber,
-    };
-    axios.post("http://localhost:4000/api/auth/signup", userData).then((response) => {
-      console.log(response);
-      history('/login');
-    })
-    .catch((error) => {
-      if (error.response) {
-        console.log(error.response);
-        console.log("server responded");
-      } else if (error.request) {
-        console.log("network error");
-      } else {
-        console.log(error);
-      }
-    });
+  e.preventDefault();
+  // Prepare user data object to be sent to the server
+  const userData = {
+      username: state.username,
+      password: state.password,
+      email: state.email,
+      address: {
+          street: state.address.street,
+          city: state.address.city,
+          state: state.address.state,
+          zipCode: state.address.zipCode,
+          country: state.address.country,
+      },
+      phoneNumber: state.phoneNumber,
+  };
+  // Send a POST request to the server with user data for sign-up
+  axios.post("http://localhost:4000/api/auth/signup", userData)
+      .then((response) => {
+          console.log(response);
+          // Redirect to login page upon successful sign-up
+          history('/login');
+      })
+      .catch((error) => {
+          // Handle different types of errors
+          if (error.response) {
+              console.log(error.response);
+              console.log("server responded");
+          } else if (error.request) {
+              console.log("network error");
+          } else {
+              console.log(error);
+          }
+      });
   };
 
   return (
+    <div className="signup-page">
     <form onSubmit={handleSubmit}>
-      <div className="container">
-        <div className="box">
+      <div className="signup_container">
           <div className="signTitle">
             <h2>Sign Up</h2>
           </div>
-            <div className="username">
+            <div className="wrapper">
                 <input 
                 className = "textSign" 
                 type="text" 
-                name = "username"
+                name = "Username"
                 value = {state.username}
                 onChange = {handleChange('username')}
-                placeholder="username"
+                placeholder="Username"
                 required/> 
             </div>
-            <div className="password">
+            <div className="wrapper">
                 <input 
                 className = "textSign" 
                 type="text" 
@@ -97,7 +108,7 @@ export default function SignUp() {
                 placeholder="Password" 
                 required/>
             </div>
-            <div className="email">
+            <div className="wrapper">
                 <input 
                 className="textSign" 
                 type="email" 
@@ -108,7 +119,7 @@ export default function SignUp() {
                 required
                 />
             </div>
-            <div className="address">
+            <div className="wrapper">
                 <input 
                 className="textSign" 
                 type="text" 
@@ -155,7 +166,7 @@ export default function SignUp() {
                 required
                 />
             </div>
-            <div className="phoneNumber">
+            <div className="wrapper">
                 <input 
                 className="textSign" 
                 type="tel" 
@@ -169,8 +180,11 @@ export default function SignUp() {
             <div className="submitButton">
               <button id='signUpB' type = "submit">Sign up</button>
             </div>
+            <h4>
+              Already have an account ? <a href='/login'>Login Now</a>
+            </h4>
         </div>   
-      </div>
     </form>
+    </div>
   )
 }
