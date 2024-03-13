@@ -1,12 +1,67 @@
-/* footer styling */
-
-/* Utilize flex boxes for structuring content in grid or list formats */
+/* Footer styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 footer {
     position: relative;
     text-align: center;
-    border: 5px solid rgb(223, 8, 169);
     padding: 10px;
     color: rgb(0, 0, 0);
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(76, 50, 33);
 }
+
+.Contact-Info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-left: 2.5%;
+}
+
+.Social-Media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-right: 2.5%;
+}
+
+.Footer_Box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 50px;
+    margin-top: 20%;
+}
+
+
+#join_bar{
+    border-radius: 8vh;
+    color: rgb(217, 217, 217);
+    margin-right: 10px;
+}
+
+#Contact{
+    font-weight: bolder;
+    font-size: 180%;
+    margin-bottom: 3%;
+}
+
+#Newsletter{
+    margin-top: 60%;
+}
+
+#Join{
+    margin-top: -2%;
+}
+
+
