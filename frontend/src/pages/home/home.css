@@ -1,7 +1,21 @@
 /* home page styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 .home-content-wrapper {
+  background-color: rgba(160, 175, 152, 1);
+  font-family: "Montserrat", sans-serif;
+}
+#title {
+  font-size: 35pt;
+  font-weight: 500;
+  color: rgba(76, 50, 33, 1);
   text-align: center;
-  border: 5px rgb(17, 255, 0);
-  background-color: rgb(255, 255, 175);
+}
+#transparent-wrap {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+.item {
+  background-color: rgba(226, 205, 188, 1);
 }
