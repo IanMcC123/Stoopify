@@ -52,6 +52,31 @@ const postItem = new mongoose.Schema(
       max: 200,
       required: true,
     },
+    brand: { // brand of item (e.g Ikea, Wayfair...)
+      type: String,
+      max: 100,
+      required: true,
+    },
+    height: { // Height of item
+      type: String,
+      max: 100,
+      required: true,
+    },
+    width: { // Width of item
+      type: String,
+      max: 100,
+      required: true,
+    },
+    color: { // Color of item
+      type: String,
+      max: 100,
+      required: true,
+    },
+    material: { // (e.g. plastic, leather...)
+      type: String,
+      max: 100,
+      required: true,
+    },
     available: { // availibilty status
       type: Boolean,
       default: true,
