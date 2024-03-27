@@ -4,6 +4,9 @@
 .home-content-wrapper {
   background-color: rgba(160, 175, 152, 1);
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #title {
   font-size: 35pt;
@@ -14,8 +17,14 @@
 #transparent-wrap {
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 75px;
+  height: 504px;
+  width: 1512px;
 }
 .item {
   background-color: rgba(226, 205, 188, 1);
+  height: 499px;
+  width: 441px;
+  border-radius: 50px;
 }
